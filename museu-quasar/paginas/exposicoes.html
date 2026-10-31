@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposições — Museu Quasar</title>
+</head>
+<body id="topo">
+    <header>
+        <h1>Exposições do Museu Quasar</h1>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="exposicoes.html" aria-current="page">Exposições</a></li>
+                <li><a href="programacao.html">Programação</a></li>
+                <li><a href="agendamento.html">Agendamento</a></li>
+                <li><a href="sobre.html">Sobre o museu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Três exposições fictícias convidam você a explorar perguntas sobre o espaço, o oceano e a criatividade humana.</p>
+        <section aria-label="Exposições do Museu Quasar">
+            <article id="quasares">
+                <h2>Quasares e galáxias</h2>
+                <p>Esta exposição propõe uma viagem visual por galáxias distantes e por objetos cósmicos muito luminosos. O conteúdo é introdutório e convida a observar como a luz ajuda a contar histórias do universo.</p>
+                <p><strong>Ideia-chave:</strong> olhar para o céu também é fazer perguntas sobre o tempo e a distância.</p>
+                <figure>
+                    <img src="../midias/imagens/quasar.png" alt="Disco brilhante e jatos de luz de um quasar sobre o fundo do espaço estrelado" width="640" height="360">
+                    <figcaption>Representação artística de um quasar para a exposição.</figcaption>
+                </figure>
+                <p><a href="https://science.nasa.gov/universe/" target="_blank" rel="noopener noreferrer">Leia sobre o universo no site da NASA</a>.</p>
+            </article>
+            <article id="oceanos">
+                <h2>Oceanos profundos</h2>
+                <p>Um percurso imaginário acompanha a luz desde a superfície até regiões mais profundas e apresenta a diversidade de formas de vida marinha. A exposição também abre espaço para conversar sobre cuidado com os ambientes aquáticos.</p>
+                <p>O oceano é um ambiente <em>vasto e diverso</em>, cheio de perguntas para investigar.</p>
+                <figure>
+                    <img src="../midias/imagens/oceano.png" alt="Arraia e peixes coloridos nadam entre bolhas e corais em águas azuis" width="640" height="360">
+                    <figcaption>Ilustração original de uma viagem pelas profundezas do oceano.</figcaption>
+                </figure>
+                <p><a href="https://oceanservice.noaa.gov/" target="_blank" rel="noopener noreferrer">Explore recursos educativos da NOAA</a>.</p>
+            </article>
+            <article id="invencoes">
+                <h2>Invenções que mudaram rotinas</h2>
+                <p>Objetos comuns também têm histórias. Nesta exposição, visitantes podem imaginar como uma necessidade vira ideia, como a ideia ganha forma e como uma invenção muda hábitos.</p>
+                <p><strong>Pergunta para levar:</strong> que problema do dia a dia você gostaria de resolver?</p>
+                <figure>
+                    <img src="../midias/imagens/invencoes.png" alt="Lâmpada amarela cercada por engrenagens e formas geométricas coloridas" width="640" height="360">
+                    <figcaption>Uma lâmpada e engrenagens representam o processo de criação.</figcaption>
+                </figure>
+                <p><a href="https://www.si.edu/" target="_blank" rel="noopener noreferrer">Conheça os acervos do Smithsonian</a>.</p>
+            </article>
+        </section>
+        <section aria-labelledby="curiosidades">
+            <h2 id="curiosidades">Curiosidades para levar com você</h2>
+            <ul>
+                <li>O nome “quasar” combina a ideia de objeto quase estelar; a exposição usa uma representação artística.</li>
+                <li>A luz que chega aos nossos olhos pode ter viajado por muito tempo pelo espaço.</li>
+                <li>Os oceanos ocupam a maior parte da superfície do planeta.</li>
+                <li>Ambientes marinhos podem incluir regiões com pouca luz.</li>
+                <li>Uma invenção pode começar com uma pergunta simples sobre uma necessidade.</li>
+                <li>Protótipos ajudam a experimentar ideias antes de uma solução final.</li>
+            </ul>
+            <details>
+                <summary>Como foram criadas as exposições?</summary>
+                <p>Os textos são fictícios e foram escritos para esta atividade. As páginas externas servem como referências educativas para quem desejar continuar pesquisando.</p>
+            </details>
+        </section>
+        <section aria-labelledby="midias">
+            <h2 id="midias">Ouça e assista</h2>
+            <p>O áudio abaixo é uma paisagem sonora espacial original, composta por tons suaves sintetizados para acompanhar uma visita imaginária à sala dos quasares.</p>
+            <audio controls preload="metadata">
+                <source src="../midias/audio/paisagem-espacial.wav" type="audio/wav">
+                <p>Seu navegador não oferece reprodução de áudio. Você pode seguir para as demais partes da exposição.</p>
+            </audio>
+            <p>O vídeo é uma vinheta de abertura de 12 segundos com os temas do Museu Quasar; as legendas podem ser ativadas no controle de legendas do reprodutor.</p>
+            <video controls width="640" height="360" preload="metadata" poster="../midias/imagens/quasar.png">
+                <source src="../midias/videos/visita-quasar.mp4" type="video/mp4">
+                <track src="../midias/videos/visita-quasar.vtt" kind="captions" srclang="pt-BR" label="Português" default>
+                <p>Seu navegador não consegue reproduzir este vídeo; consulte a descrição acima.</p>
+            </video>
+        </section>
+        <p><a href="programacao.html">Consultar a programação</a> ou <a href="agendamento.html">abrir a solicitação simulada de visita</a>.</p>
+    </main>
+    <footer>
+        <p>Projeto educacional de HTML5 — Museu Quasar fictício.</p>
+        <p><a href="#topo">Voltar ao início</a></p>
+    </footer>
+</body>
+</html>

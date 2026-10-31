@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento simulado — Museu Quasar</title>
+</head>
+<body id="topo">
+    <header>
+        <h1>Solicitação simulada de visita</h1>
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="exposicoes.html">Exposições</a></li>
+                <li><a href="programacao.html">Programação</a></li>
+                <li><a href="agendamento.html" aria-current="page">Agendamento</a></li>
+                <li><a href="sobre.html">Sobre o museu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <p>Este formulário pratica campos e validação do navegador. Ele não envia dados a um museu, não reserva horários e pode mostrar valores na própria URL após o envio. Preencha somente com dados fictícios.</p>
+        <form>
+            <fieldset>
+                <legend>Grupo A — Dados do visitante</legend>
+                <label for="nome">Nome completo (fictício):</label>
+                <input type="text" id="nome" name="nome" minlength="3" maxlength="80" autocomplete="off" required>
+                <label for="email">E-mail fictício:</label>
+                <input type="email" id="email" name="email" autocomplete="off" required>
+                <label for="telefone">Telefone para contato (opcional e fictício):</label>
+                <input type="tel" id="telefone" name="telefone" autocomplete="off" pattern="[0-9()+ -]{8,20}" title="Use de 8 a 20 caracteres: números, espaços, parênteses, + ou hífen.">
+                <label for="convite">Código de convite (formato ABC-123):</label>
+                <input type="text" id="convite" name="convite" pattern="[A-Z]{3}-[0-9]{3}" title="Digite três letras maiúsculas, um hífen e três números, por exemplo SOL-123." maxlength="7" minlength="7" required>
+            </fieldset>
+            <fieldset>
+                <legend>Grupo B — Informações da visita</legend>
+                <label for="data-visita">Data preferida:</label>
+                <input type="date" id="data-visita" name="data_visita" min="2026-11-01" max="2026-12-31" required>
+                <label for="horario">Horário preferido:</label>
+                <input type="time" id="horario" name="horario" min="09:00" max="18:00" required>
+                <label for="quantidade">Quantidade de visitantes (de 1 a 5):</label>
+                <input type="number" id="quantidade" name="quantidade" min="1" max="5" value="1" required>
+                <label for="instituicao">Instituição ou turma (opcional):</label>
+                <input type="text" id="instituicao" name="instituicao" list="sugestoes-instituicao" maxlength="80" autocomplete="off">
+                <datalist id="sugestoes-instituicao">
+                    <option value="Turma de Ciências">
+                    <option value="Clube de Astronomia">
+                    <option value="Visita em família">
+                </datalist>
+                <p>Tipo de visita (escolha uma opção):</p>
+                <input type="radio" id="individual" name="tipo_visita" value="individual" required>
+                <label for="individual">Individual</label>
+                <input type="radio" id="familia" name="tipo_visita" value="familia">
+                <label for="familia">Família</label>
+                <input type="radio" id="escolar" name="tipo_visita" value="grupo-escolar">
+                <label for="escolar">Grupo escolar</label>
+                <p>Áreas de interesse (pode marcar mais de uma):</p>
+                <input type="checkbox" id="interesse-espaco" name="interesses" value="espaco">
+                <label for="interesse-espaco">Espaço</label>
+                <input type="checkbox" id="interesse-oceanos" name="interesses" value="oceanos">
+                <label for="interesse-oceanos">Oceanos</label>
+                <input type="checkbox" id="interesse-invencoes" name="interesses" value="invencoes">
+                <label for="interesse-invencoes">Invenções</label>
+            </fieldset>
+            <fieldset>
+                <legend>Grupo C — Preferências e confirmação</legend>
+                <label for="exposicao">Exposição principal:</label>
+                <select id="exposicao" name="exposicao" required>
+                    <option value="">Selecione…</option>
+                    <option value="quasares">Quasares e galáxias</option>
+                    <option value="oceanos">Oceanos profundos</option>
+                    <option value="invencoes">Invenções que mudaram rotinas</option>
+                </select>
+                <label for="observacoes">Observações (até 300 caracteres):</label>
+                <textarea id="observacoes" name="observacoes" rows="5" cols="45" maxlength="300"></textarea>
+                <label for="curiosidade">Nível de curiosidade hoje (1 a 10):</label>
+                <input type="range" id="curiosidade" name="curiosidade" min="1" max="10" value="7">
+                <p>Esta escala é apenas uma escolha demonstrativa e não será armazenada.</p>
+                <input type="checkbox" id="confirmacao" name="confirmacao_ficticia" value="confirmo" required>
+                <label for="confirmacao">Confirmo que usarei dados fictícios e compreendo que isto é somente uma demonstração.</label>
+            </fieldset>
+            <button type="submit">Enviar demonstração</button>
+            <button type="reset">Limpar formulário</button>
+        </form>
+        <details>
+            <summary>Por que o código precisa ser em maiúsculas?</summary>
+            <p>O atributo pattern usa [A-Z]{3}-[0-9]{3}: três letras de A a Z, um hífen literal e três algarismos. O navegador verifica apenas o formato, não a existência do código.</p>
+        </details>
+        <p><a href="exposicoes.html">Voltar às exposições</a></p>
+    </main>
+    <footer>
+        <p>Projeto educacional de HTML5 — Museu Quasar fictício.</p>
+        <p><a href="#topo">Voltar ao início</a></p>
+    </footer>
+</body>
+</html>
